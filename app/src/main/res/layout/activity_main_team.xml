@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DexLayout">
+
+    <!-- upper navigation bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:nestedScrollingEnabled="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_notifications_black_24dp"
+        app:navigationIcon="@drawable/ic_dashboard_black_24dp"
+        app:subtitle="page"
+        app:title="Home"
+        app:titleMarginStart="40dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- bottom navigation bar -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1179ac"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.224"
+        tools:ignore="MissingConstraints">
+
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Ivysaur"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_02" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Ivysaur"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/item_lvl"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toEndOf="@+id/item_image"
+            tools:layout_editor_absoluteY="-4dp" />
+
+        <TextView
+            android:id="@+id/item_lvl"
+            android:layout_width="86dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="LVL 22"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_title"
+            tools:layout_editor_absoluteY="-3dp" />
+
+        <TextView
+            android:id="@+id/item_detail_a"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Tipo: Planta / Veneno"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/item_title"
+            tools:layout_editor_absoluteY="51dp" />
+
+        <TextView
+            android:id="@+id/item_detail_b"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="PS: 30/30 ATK:8 DEF:8"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.741"
+            app:layout_constraintStart_toEndOf="@+id/Ivysaur"
+            app:layout_constraintTop_toBottomOf="@+id/item_detail_a" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1179ac"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Charizard"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_06" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title2"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Charizard"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/item_lvl2"
+            app:layout_constraintStart_toEndOf="@+id/item_image2"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_lvl2"
+            android:layout_width="86dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="LVL 45"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_title2"
+            tools:layout_editor_absoluteY="-3dp" />
+
+        <TextView
+            android:id="@+id/item_detail_a2"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Tipo: Fuego / Volador"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/item_image2"
+            tools:layout_editor_absoluteY="40dp" />
+
+        <TextView
+            android:id="@+id/item_detail_b2"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="PS: 30/30 ATK:8 DEF:8"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Charizard"
+            app:layout_constraintTop_toBottomOf="@+id/item_detail_a2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1179ac"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Slowpoke"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_79" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title3"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Slowpoke"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/item_lvl3"
+            app:layout_constraintStart_toEndOf="@+id/item_image3"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_lvl3"
+            android:layout_width="86dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="LVL 25"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_title3"
+            tools:layout_editor_absoluteY="-3dp" />
+
+        <TextView
+            android:id="@+id/item_detail_a3"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Tipo: Agua / Psiquico"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/item_image3"
+            tools:layout_editor_absoluteY="40dp" />
+
+        <TextView
+            android:id="@+id/item_detail_b3"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="PS: 30/30 ATK:8 DEF:8"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Slowpoke"
+            app:layout_constraintTop_toBottomOf="@+id/item_detail_a3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1179ac"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Ambar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ambar" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title4"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Ambar"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/item_lvl4"
+            app:layout_constraintStart_toEndOf="@+id/item_image4"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_lvl4"
+            android:layout_width="86dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="LVL 5"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_title4"
+            tools:layout_editor_absoluteY="-3dp" />
+
+        <TextView
+            android:id="@+id/item_detail_a4"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Tipo: Lolera / Rata"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/item_image4"
+            tools:layout_editor_absoluteY="40dp" />
+
+        <TextView
+            android:id="@+id/item_detail_b4"
+            android:layout_width="229dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="PS: 30/30 ATK:8 DEF:8"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Ambar"
+            app:layout_constraintTop_toBottomOf="@+id/item_detail_a4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeLayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:nestedScrollingEnabled="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_notifications_black_24dp"
+        app:navigationIcon="@drawable/ic_dashboard_black_24dp"
+        app:subtitle="page"
+        app:title="Home"
+        app:titleMarginStart="40dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="400dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="24dp"
+        android:background="#E91E63"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        tools:ignore="MissingConstraints">
+
+        <!-- image layout-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team 1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-5dp" />
+
+        <ImageView
+            android:id="@+id/team1_pokemon1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team1_pokemon2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:srcCompat="@drawable/_02" />
+
+        <ImageView
+            android:id="@+id/team1_pokemon2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team1_pokemon3"
+            app:layout_constraintHorizontal_bias="0.414"
+            app:layout_constraintStart_toEndOf="@+id/team1_pokemon1"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/_06" />
+
+        <ImageView
+            android:id="@+id/team1_pokemon3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team1_pokemon4"
+            app:layout_constraintStart_toEndOf="@+id/team1_pokemon2"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/_79" />
+
+        <ImageView
+            android:id="@+id/team1_pokemon4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/team1_pokemon3"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/ambar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="24dp"
+        android:background="#E91E63"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints">
+
+        <!-- image layout-->
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team 2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-5dp" />
+
+        <ImageView
+            android:id="@+id/team2_pokemon1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team2_pokemon2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:srcCompat="@drawable/_pokeball_" />
+
+        <ImageView
+            android:id="@+id/team2_pokemon2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team2_pokemon3"
+            app:layout_constraintHorizontal_bias="0.414"
+            app:layout_constraintStart_toEndOf="@+id/team2_pokemon1"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/_pokeball_" />
+
+        <ImageView
+            android:id="@+id/team2_pokemon3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/team2_pokemon4"
+            app:layout_constraintStart_toEndOf="@+id/team2_pokemon2"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/_pokeball_" />
+
+        <ImageView
+            android:id="@+id/team2_pokemon4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/team2_pokemon3"
+            tools:layout_editor_absoluteY="30dp"
+            tools:srcCompat="@drawable/_pokeball_" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

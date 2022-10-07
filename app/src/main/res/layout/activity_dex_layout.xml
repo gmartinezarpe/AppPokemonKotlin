@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".DexLayout"
+    >
+
+    <!-- upper navigation bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:nestedScrollingEnabled="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_notifications_black_24dp"
+        app:navigationIcon="@drawable/ic_dashboard_black_24dp"
+        app:subtitle="page"
+        app:title="Home"
+        app:titleMarginStart="40dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- bottom navigation bar -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:background="#e42222"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.114"
+        tools:ignore="MissingConstraints">
+        >
+
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/bulbasaur"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_01" />
+
+        <!-- title text -->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:text="01 - Bulbasaur"
+            android:textColor="#d1d1d1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_image"
+            app:layout_constraintStart_toEndOf="@+id/item_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_detail"
+            android:layout_width="229dp"
+            android:layout_height="54dp"
+            android:text="Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo."
+            android:textColor="#d1d1d1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_image"
+            app:layout_constraintStart_toEndOf="@+id/item_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="#e42222"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Ivysaur"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_02" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title2"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:text="02 - Ivysaur "
+            android:textColor="#d1d1d1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_image2"
+            app:layout_constraintStart_toEndOf="@+id/item_image2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_detail2"
+            android:layout_width="229dp"
+            android:layout_height="54dp"
+            android:text="Cuando le crece bastante el bulbo del lomo, pierde la capacidad de erguirse sobre las patas traseras. "
+            android:textColor="#d1d1d1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.418"
+            app:layout_constraintStart_toEndOf="@+id/item_image2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="#e42222"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Venasaur"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_03" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title3"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:text="03 - Venasaur"
+            android:textColor="#d1d1d1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_image3"
+            app:layout_constraintStart_toEndOf="@+id/item_image3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_detail3"
+            android:layout_width="229dp"
+            android:layout_height="54dp"
+            android:text="La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol."
+            android:textColor="#d1d1d1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.418"
+            app:layout_constraintStart_toEndOf="@+id/item_image3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="#e42222"
+        android:padding="16dp"
+        app:cardElevation="3dp"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        tools:ignore="MissingConstraints">
+        >
+
+        <!-- image layout-->
+        <ImageView
+            android:id="@+id/item_image4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Pokemon image -->
+        <ImageView
+            android:id="@+id/Charmander"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/_04" />
+
+        <!-- title text -->
+
+        <!-- subtext -->
+        <TextView
+            android:id="@+id/item_title4"
+            android:layout_width="236dp"
+            android:layout_height="39dp"
+            android:text="04 - Charmander"
+            android:textColor="#d1d1d1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_image4"
+            app:layout_constraintStart_toEndOf="@+id/item_image4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_detail4"
+            android:layout_width="229dp"
+            android:layout_height="54dp"
+            android:text="Prefiere las cosas calientes. Dicen que cuando llueve le sale vapor de la punta de la cola."
+            android:textColor="#d1d1d1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.418"
+            app:layout_constraintStart_toEndOf="@+id/item_image4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
