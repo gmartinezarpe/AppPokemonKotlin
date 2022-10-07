@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
 
         // declaramos las variables
 
-        val til_user = findViewById<TextInputLayout>(R.id.til_user)
-        val til_password = findViewById<TextInputLayout>(R.id.til_password)
-        val button_login = findViewById<Button>(R.id.button_login)
+        val am_til_tv_user = findViewById<TextInputLayout>(R.id.am_til_tv_user)
+        val am_til_tv_password = findViewById<TextInputLayout>(R.id.am_til_tv_password)
+        val am_til_btn_login = findViewById<Button>(R.id.am_til_btn_login)
 
-        button_login.setOnClickListener{
-            val intent = Intent(this@MainActivity,HomeLayout::class.java )
+        am_til_btn_login.setOnClickListener{
+            val intent = Intent(this, HomeLayout::class.java )
             startActivity(intent)
         }
 
