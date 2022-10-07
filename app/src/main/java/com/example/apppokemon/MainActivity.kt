@@ -26,7 +26,16 @@ class MainActivity : AppCompatActivity() {
 
             val emailValid = TilValidator(til_user).required().email().isValid()
 
-            Toast.makeText(this, emailValid.toString(), Toast.LENGTH_SHORT).show()
+            val passwordValid = TilValidator(til_password).required().isValid()
+
+            if (emailValid && passwordValid) {
+                val intent = Intent(this, HomeLayout::class.java )
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Campos invalidos", Toast.LENGTH_SHORT).show()
+            }
+
+            //Toast.makeText(this, emailValid.toString(), Toast.LENGTH_SHORT).show()
             //val intent = Intent(this, HomeLayout::class.java )
             //startActivity(intent)
         }
