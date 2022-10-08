@@ -38,6 +38,7 @@ class TilValidator constructor(til: TextInputLayout) {
         return this
     }
 
+
     fun isValid(): Boolean {
         return  !this.invalid
     }

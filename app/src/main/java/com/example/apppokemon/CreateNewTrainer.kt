@@ -19,10 +19,7 @@ class CreateNewTrainer : AppCompatActivity() {
         val Bottom_cancel = findViewById<Button>(R.id.act_new_trainer_btn_cancel)
 
 
-        Bottom_create.setOnClickListener{
-            val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
-            startActivity(intent)
-        }
+
 
         Bottom_cancel.setOnClickListener{
             val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
@@ -46,28 +43,38 @@ class CreateNewTrainer : AppCompatActivity() {
             val Password_register = tilPassword_register.editText?.text.toString()
             val Password_register_confirm = tilPassword_register_confirm.editText?.text.toString()
 
-            val Name_registerValid = TilValidator(tilEmail_register).required().isValid()
+            val Name_registerValid = TilValidator(tilName_register).required().isValid()
 
             val Last_nameValid = TilValidator(tilLast_name).required().isValid()
 
-            val Email_registerValid = TilValidator(tilEmail_register).required().isValid()
+            val Email_registerValid = TilValidator(tilEmail_register).required().email().isValid()
 
             val Password_registerValid = TilValidator(tilPassword_register).required().isValid()
 
             val Password_register_confirmValid = TilValidator(tilPassword_register_confirm).required().isValid()
 
-            if(Password_registerValid == Password_register_confirmValid) {
 
-                val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
-                startActivity(intent)
 
-                Toast.makeText(this, "tu usuario a sido creado",Toast.LENGTH_SHORT).show()
-            } else{
-                Toast.makeText(this, "No coinciden las contraseñas",Toast.LENGTH_SHORT).show()
-                  }
+            // Validación completa
+            
+            if(Name_registerValid && Last_nameValid && Email_registerValid &&
+                Password_registerValid && Password_register_confirmValid) {
+                if(Password_register == Password_register_confirm) {
+
+                    val intent = Intent(this@CreateNewTrainer, MainActivity::class.java)
+                    startActivity(intent)
+
+                    Toast.makeText(this, "Su usuario ha sido creado", Toast.LENGTH_SHORT).show()
+                } else {
+
+                    Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+
+                }
+            }else{
+                Toast.makeText(this, "Existen campos sin rellenar", Toast.LENGTH_SHORT).show()
+
             }
-
-
+        }
 
         Bottom_cancel.setOnClickListener{
             val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
