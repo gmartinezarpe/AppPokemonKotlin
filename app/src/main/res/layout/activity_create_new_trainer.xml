@@ -10,7 +10,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/act_new_trainer_tv_last_name"
         android:layout_width="278dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/act_register_tv_gender_label"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +96,7 @@
         android:id="@+id/act_new_trainer_tv_name"
         style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="278dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/act_new_trainer_tv_last_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +112,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/act_new_trainer_tv_email"
         android:layout_width="278dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/act_new_trainer_tv_password1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,13 +124,14 @@
             android:layout_height="53dp"
             android:drawableRight="@android:drawable/ic_dialog_email"
             android:drawableTint="#000000"
-            android:hint="Email" />
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/act_new_trainer_tv_password1"
         android:layout_width="278dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/act_new_trainer_tv_password2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,13 +141,15 @@
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:drawableRight="@android:drawable/ic_secure"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/act_new_trainer_tv_password2"
         android:layout_width="278dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/act_new_trainer_btn_new_login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +159,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@android:drawable/ic_secure"
-            android:hint="Password confirm" />
+            android:hint="Password confirm"
+            android:inputType="textPassword"
+            android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -172,7 +177,7 @@
     <Spinner
         android:id="@+id/activity_register_spn_gender"
         android:layout_width="278dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/act_new_trainer_tv_email"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"

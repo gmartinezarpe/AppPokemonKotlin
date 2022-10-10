@@ -39,13 +39,12 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="313dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="79dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
         android:labelFor="@id/imageButton3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="SpeakableTextPresentCheck"
@@ -77,14 +76,14 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/act_home_layout_tv_pokedex"
         android:layout_width="193dp"
         android:layout_height="25dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="17dp"
-        android:text="Your last 3 teams created"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="ir a pokedex prueba"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,13 +94,14 @@
         android:id="@+id/recyclerView"
         android:layout_width="221dp"
         android:layout_height="183dp"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/act_home_layout_tv_pokedex" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
