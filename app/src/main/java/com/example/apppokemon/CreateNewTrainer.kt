@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewDebug.FlagToString
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Spinner
 import android.widget.Toast
 import com.example.apppokemon.utils.TilValidator
 import com.google.android.material.textfield.TextInputLayout
@@ -32,8 +34,15 @@ class CreateNewTrainer : AppCompatActivity() {
         val tilEmail_register = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_email)
         val tilPassword_register = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_password1)
         val tilPassword_register_confirm = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_password2)
+        val spnGender = findViewById<Spinner>(R.id.activity_register_spn_gender)
 
-
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.genders_array,
+            android.R.layout.simple_spinner_item
+        )
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spnGender.adapter = adapter
 
         Bottom_create.setOnClickListener{
 
@@ -52,7 +61,6 @@ class CreateNewTrainer : AppCompatActivity() {
             val Password_registerValid = TilValidator(tilPassword_register).required().isValid()
 
             val Password_register_confirmValid = TilValidator(tilPassword_register_confirm).required().isValid()
-
 
 
             // Validación completa
@@ -83,4 +91,5 @@ class CreateNewTrainer : AppCompatActivity() {
 
 
     }
+
 }
