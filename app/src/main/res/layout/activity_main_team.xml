@@ -39,7 +39,7 @@
         app:contentPadding="2dp"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.224"
@@ -76,29 +76,12 @@
             android:layout_width="130dp"
             android:layout_height="39dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:text="Ivysaur"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/item_lvl"
-            app:layout_constraintHorizontal_bias="0.441"
             app:layout_constraintStart_toEndOf="@+id/item_image"
-            tools:layout_editor_absoluteY="-4dp" />
-
-        <TextView
-            android:id="@+id/item_lvl"
-            android:layout_width="86dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="LVL 22"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/item_title"
-            tools:layout_editor_absoluteY="-3dp" />
+            tools:layout_editor_absoluteY="12dp" />
 
         <TextView
             android:id="@+id/item_detail_a"
@@ -128,6 +111,36 @@
             app:layout_constraintHorizontal_bias="0.741"
             app:layout_constraintStart_toEndOf="@+id/Ivysaur"
             app:layout_constraintTop_toBottomOf="@+id/item_detail_a" />
+
+        <ImageButton
+            android:id="@+id/eliminar_uno"
+            android:layout_width="48dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/item_detail_a"
+            app:layout_constraintEnd_toStartOf="@+id/actualizar_uno"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/item_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+        <ImageButton
+            android:id="@+id/actualizar_uno"
+            android:layout_width="42dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/item_detail_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eliminar_uno"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_popup_sync" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -173,34 +186,20 @@
         <!-- title text -->
 
         <!-- subtext -->
+
+        <!-- subtext -->
+
         <TextView
             android:id="@+id/item_title2"
             android:layout_width="130dp"
             android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
             android:text="Charizard"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/item_lvl2"
             app:layout_constraintStart_toEndOf="@+id/item_image2"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <!-- subtext -->
-        <TextView
-            android:id="@+id/item_lvl2"
-            android:layout_width="86dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="LVL 45"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/item_title2"
-            tools:layout_editor_absoluteY="-3dp" />
+            tools:layout_editor_absoluteY="2dp" />
 
         <TextView
             android:id="@+id/item_detail_a2"
@@ -230,6 +229,22 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Charizard"
             app:layout_constraintTop_toBottomOf="@+id/item_detail_a2" />
+
+        <ImageButton
+            android:id="@+id/eliminar_dos"
+            android:layout_width="48dp"
+            android:layout_height="39dp"
+            app:srcCompat="@android:drawable/ic_delete"
+            tools:layout_editor_absoluteX="263dp"
+            tools:layout_editor_absoluteY="-2dp" />
+
+        <ImageButton
+            android:id="@+id/actualizar_dos"
+            android:layout_width="42dp"
+            android:layout_height="44dp"
+            app:srcCompat="@android:drawable/ic_popup_sync"
+            tools:layout_editor_absoluteX="320dp"
+            tools:layout_editor_absoluteY="-1dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -275,34 +290,20 @@
         <!-- title text -->
 
         <!-- subtext -->
+
+        <!-- subtext -->
+
         <TextView
             android:id="@+id/item_title3"
             android:layout_width="130dp"
             android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
             android:text="Slowpoke"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/item_lvl3"
             app:layout_constraintStart_toEndOf="@+id/item_image3"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <!-- subtext -->
-        <TextView
-            android:id="@+id/item_lvl3"
-            android:layout_width="86dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="LVL 25"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/item_title3"
-            tools:layout_editor_absoluteY="-3dp" />
+            tools:layout_editor_absoluteY="4dp" />
 
         <TextView
             android:id="@+id/item_detail_a3"
@@ -332,6 +333,22 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Slowpoke"
             app:layout_constraintTop_toBottomOf="@+id/item_detail_a3" />
+
+        <ImageButton
+            android:id="@+id/eliminar_tres"
+            android:layout_width="39dp"
+            android:layout_height="46dp"
+            app:srcCompat="@android:drawable/ic_delete"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="-13dp" />
+
+        <ImageButton
+            android:id="@+id/actualizar_tres"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            app:srcCompat="@android:drawable/ic_popup_sync"
+            tools:layout_editor_absoluteX="323dp"
+            tools:layout_editor_absoluteY="-11dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -377,34 +394,20 @@
         <!-- title text -->
 
         <!-- subtext -->
+
+        <!-- subtext -->
+
         <TextView
             android:id="@+id/item_title4"
             android:layout_width="130dp"
             android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
             android:text="Ambar"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/item_lvl4"
             app:layout_constraintStart_toEndOf="@+id/item_image4"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <!-- subtext -->
-        <TextView
-            android:id="@+id/item_lvl4"
-            android:layout_width="86dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="LVL 5"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/item_title4"
-            tools:layout_editor_absoluteY="-3dp" />
+            tools:layout_editor_absoluteY="-10dp" />
 
         <TextView
             android:id="@+id/item_detail_a4"
@@ -434,6 +437,22 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Ambar"
             app:layout_constraintTop_toBottomOf="@+id/item_detail_a4" />
+
+        <ImageButton
+            android:id="@+id/eliminar_cuatro"
+            android:layout_width="39dp"
+            android:layout_height="42dp"
+            app:srcCompat="@android:drawable/ic_delete"
+            tools:layout_editor_absoluteX="275dp"
+            tools:layout_editor_absoluteY="-8dp" />
+
+        <ImageButton
+            android:id="@+id/actualizar_cuatro"
+            android:layout_width="44dp"
+            android:layout_height="41dp"
+            app:srcCompat="@android:drawable/ic_popup_sync"
+            tools:layout_editor_absoluteX="330dp"
+            tools:layout_editor_absoluteY="-7dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

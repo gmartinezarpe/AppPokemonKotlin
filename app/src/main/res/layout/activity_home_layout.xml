@@ -85,7 +85,6 @@
         android:layout_marginBottom="8dp"
         android:text="ir a pokedex prueba"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/act_home_layout_tv_update"
         app:layout_constraintEnd_toStartOf="@+id/act_home_layout_tv_teams"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
@@ -97,43 +96,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="ir a teams prueba"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/act_home_layout_tv_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/act_home_layout_tv_pokedex"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
-    <TextView
-        android:id="@+id/act_home_layout_tv_update"
-        android:layout_width="193dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="ir a update"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toStartOf="@+id/act_home_layout_tv_delete"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_home_layout_tv_pokedex" />
-
-    <TextView
-        android:id="@+id/act_home_layout_tv_delete"
-        android:layout_width="193dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="ir a delete"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/act_home_layout_tv_update"
-        app:layout_constraintTop_toBottomOf="@+id/act_home_layout_tv_teams" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -146,8 +114,7 @@
         android:foregroundGravity="center"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_home_layout_tv_update" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

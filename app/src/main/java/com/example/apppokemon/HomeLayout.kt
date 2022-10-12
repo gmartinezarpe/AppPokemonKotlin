@@ -13,8 +13,6 @@ class HomeLayout : AppCompatActivity() {
 
         val btn_tv_pokedex = findViewById<TextView>(R.id.act_home_layout_tv_pokedex)
         val btn_tv_teams = findViewById<TextView>(R.id.act_home_layout_tv_teams)
-        val btn_tv_update = findViewById<TextView>(R.id.act_home_layout_tv_update)
-        val btn_tv_delete = findViewById<TextView>(R.id.act_home_layout_tv_delete)
 
         btn_tv_pokedex.setOnClickListener {
             val intent = Intent(this, DexLayout::class.java)
@@ -26,15 +24,6 @@ class HomeLayout : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_tv_update.setOnClickListener {
-            val intent = Intent(this, UpdataActivity::class.java)
-            startActivity(intent)
-        }
-
-        btn_tv_delete.setOnClickListener {
-            val intent = Intent(this, DeleteActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 }
