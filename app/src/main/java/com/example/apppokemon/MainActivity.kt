@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.example.apppokemon.controllers.AuthController
 import com.example.apppokemon.utils.TilValidator
 import com.google.android.material.textfield.TextInputLayout
 
@@ -21,16 +22,14 @@ class MainActivity : AppCompatActivity() {
         val btn_create_ntrainer = findViewById<Button>(R.id.am_til_btn_create_new_trainer)
 
         btn_login.setOnClickListener{
-            val email = til_user.editText?.text
-            val password = til_password.editText?.text
+            val email = til_user.editText?.text.toString()
+            val password = til_password.editText?.text.toString()
 
             val emailValid = TilValidator(til_user).required().email().isValid()
-
             val passwordValid = TilValidator(til_password).required().isValid()
 
             if (emailValid && passwordValid) {
-                val intent = Intent(this, HomeLayout::class.java )
-                startActivity(intent)
+                AuthController(this).login(email,  password)
             } else {
                 Toast.makeText(this, "Campos invalidos", Toast.LENGTH_SHORT).show()
             }

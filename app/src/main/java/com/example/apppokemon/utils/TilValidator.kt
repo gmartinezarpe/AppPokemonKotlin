@@ -38,6 +38,14 @@ class TilValidator constructor(til: TextInputLayout) {
         return this
     }
 
+    /*fun password(): TilValidator {
+        if (mustValidate()){
+            val invalidField = !Patterns.EMAIL_ADDRESS.matcher(this.value).matches()
+            this.setError(invalidField, "El valor debe ser un email valido")
+        }
+        return this
+    }*/
+
 
     fun isValid(): Boolean {
         return  !this.invalid
