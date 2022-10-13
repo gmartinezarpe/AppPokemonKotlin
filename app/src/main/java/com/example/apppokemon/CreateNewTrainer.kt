@@ -20,9 +20,6 @@ class CreateNewTrainer : AppCompatActivity() {
         val Bottom_create = findViewById<Button>(R.id.act_new_trainer_btn_new_login)
         val Bottom_cancel = findViewById<Button>(R.id.act_new_trainer_btn_cancel)
 
-
-
-
         Bottom_cancel.setOnClickListener{
             val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
             startActivity(intent)
@@ -71,25 +68,17 @@ class CreateNewTrainer : AppCompatActivity() {
 
                     val intent = Intent(this@CreateNewTrainer, MainActivity::class.java)
                     startActivity(intent)
-
                     Toast.makeText(this, "Su usuario ha sido creado", Toast.LENGTH_SHORT).show()
                 } else {
-
                     Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
-
                 }
             }else{
                 Toast.makeText(this, "Existen campos sin rellenar", Toast.LENGTH_SHORT).show()
-
             }
         }
-
         Bottom_cancel.setOnClickListener{
             val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
             startActivity(intent)
         }
-
-
     }
-
 }
