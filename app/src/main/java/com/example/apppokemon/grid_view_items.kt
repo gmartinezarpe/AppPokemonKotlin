@@ -13,7 +13,7 @@ class grid_view_items : AppCompatActivity() {
         val Contrain_TeamUno = findViewById<ConstraintLayout>(R.id.Contrain_TeamUno)
 
         Contrain_TeamUno.setOnClickListener{
-            val intent = Intent(this, MainTeam::class.java )
+            val intent = Intent(this, TeamsDetail::class.java )
             startActivity(intent)
         }
 

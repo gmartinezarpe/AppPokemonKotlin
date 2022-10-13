@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainTeam">
+    tools:context=".TeamsDetail">
 
-    <!-- upper navigation bar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -119,7 +118,7 @@
             app:layout_constraintTop_toBottomOf="@+id/item_detail_a" />
 
         <ImageButton
-            android:id="@+id/eliminar_uno"
+            android:id="@+id/act_detail_iv_delete_one"
             android:layout_width="48dp"
             android:layout_height="39dp"
             android:layout_marginStart="8dp"
@@ -127,7 +126,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/item_detail_a"
-            app:layout_constraintEnd_toStartOf="@+id/actualizar_uno"
+            app:layout_constraintEnd_toStartOf="@+id/act_detail_iv_update_one"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/item_title"
             app:layout_constraintTop_toTopOf="parent"
@@ -135,7 +134,7 @@
             app:srcCompat="@android:drawable/ic_delete" />
 
         <ImageButton
-            android:id="@+id/actualizar_uno"
+            android:id="@+id/act_detail_iv_update_one"
             android:layout_width="42dp"
             android:layout_height="44dp"
             android:layout_marginStart="8dp"
@@ -144,7 +143,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/item_detail_a"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/eliminar_uno"
+            app:layout_constraintStart_toEndOf="@+id/act_detail_iv_delete_one"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_popup_sync" />
 
