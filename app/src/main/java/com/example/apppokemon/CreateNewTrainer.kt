@@ -31,20 +31,25 @@ class CreateNewTrainer : AppCompatActivity() {
         val tilEmail_register = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_email)
         val tilPassword_register = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_password1)
         val tilPassword_register_confirm = findViewById<TextInputLayout>(R.id.act_new_trainer_tv_password2)
-        val spnGender = findViewById<Spinner>(R.id.activity_register_spn_gender)
+        val tilspnGender = findViewById<Spinner>(R.id.activity_register_spn_gender)
 
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.genders_array,
             android.R.layout.simple_spinner_item
+
         )
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spnGender.adapter = adapter
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            tilspnGender.adapter = adapter
+
+
 
         Bottom_create.setOnClickListener{
 
             val Name_register = tilName_register.editText?.text
             val Last_name = tilLast_name.editText?.text
+            val spinner_gender = tilspnGender.selectedItem.toString()
             val Email_register = tilEmail_register.editText?.text
             val Password_register = tilPassword_register.editText?.text.toString()
             val Password_register_confirm = tilPassword_register_confirm.editText?.text.toString()
@@ -60,21 +65,32 @@ class CreateNewTrainer : AppCompatActivity() {
             val Password_register_confirmValid = TilValidator(tilPassword_register_confirm).required().isValid()
 
 
+
             // Validación completa
             
             if(Name_registerValid && Last_nameValid && Email_registerValid &&
                 Password_registerValid && Password_register_confirmValid) {
                 if(Password_register == Password_register_confirm) {
+                    if(Password_register != null && Password_register_confirm != null) {
+                            val intent = Intent(this@CreateNewTrainer, MainActivity::class.java)
+                            startActivity(intent)
+                            Toast.makeText(this, "Su usuario ha sido creado", Toast.LENGTH_SHORT).show()
+                            //     Toast.makeText(this, spinner_gender, Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this@CreateNewTrainer, MainActivity::class.java)
-                    startActivity(intent)
-                    Toast.makeText(this, "Su usuario ha sido creado", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(this, "Debe ingresar una contraseña", Toast.LENGTH_SHORT).show()
+
+                    }
+
                 } else {
                     Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 }
             }else{
                 Toast.makeText(this, "Existen campos sin rellenar", Toast.LENGTH_SHORT).show()
             }
+
+
+
         }
         Bottom_cancel.setOnClickListener{
             val intent = Intent(this@CreateNewTrainer, MainActivity::class.java )
