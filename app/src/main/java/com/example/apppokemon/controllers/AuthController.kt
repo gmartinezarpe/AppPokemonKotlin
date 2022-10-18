@@ -10,7 +10,7 @@ class AuthController constructor(ctx: Context) {
     private val ctx = ctx
 
     fun login(email: String, password: String){
-        if(email == "pato@dvck.cl" && password == "1234") {
+        if(email == "profesor" && password == "1234") {
             Toast.makeText(this.ctx, "Bienvenido Entrenador", Toast.LENGTH_SHORT).show()
             val intent = Intent(this.ctx, HomeLayout::class.java)
             this.ctx.startActivity(intent)

@@ -28,15 +28,17 @@ class MainActivity : AppCompatActivity() {
             val emailValid = TilValidator(til_user).required().email().isValid()
             val passwordValid = TilValidator(til_password).required().isValid()
 
-            if (emailValid && passwordValid) {
+        /*    if (emailValid && passwordValid) {
                 AuthController(this).login(email,  password)
             } else {
                 Toast.makeText(this, "Campos invalidos", Toast.LENGTH_SHORT).show()
             }
 
-            //Toast.makeText(this, emailValid.toString(), Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this, HomeLayout::class.java )
-            //startActivity(intent)
+         */
+
+            Toast.makeText(this, emailValid.toString(), Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeLayout::class.java )
+            startActivity(intent)
         }
 
         btn_create_ntrainer.setOnClickListener{
