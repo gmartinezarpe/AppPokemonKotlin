@@ -5,14 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
 import com.example.apppokemon.controllers.AuthController
 import com.example.apppokemon.utils.TilValidator
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
+import roomDataBase.DB
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val room = Room.databaseBuilder(this, DB::class.java,"database-hola").allowMainThreadQueries().build()
+
 
         // declaramos las variables
 
@@ -25,14 +32,25 @@ class MainActivity : AppCompatActivity() {
             val email = til_user.editText?.text.toString()
             val password = til_password.editText?.text.toString()
 
+
+
             val emailValid = TilValidator(til_user).required().email().isValid()
             val passwordValid = TilValidator(til_password).required().isValid()
 
             if (emailValid && passwordValid) {
-                val intent = Intent(this, HomeLayout::class.java )
-                startActivity(intent)
+                lifecycleScope.launch{
+                    val response = room.daoUsuario().Login(email,password)
+                    if(response.size == 1) {
+                        Toast.makeText(this@MainActivity, "Login Exitoso", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@MainActivity, HomeLayout::class.java )
+                        startActivity(intent)
+
+                    }else{
+                        Toast.makeText(this@MainActivity, "Login Invalido", Toast.LENGTH_SHORT).show()
+                    }
+                }
             } else {
-                Toast.makeText(this, "Campos invalidos", Toast.LENGTH_SHORT).show()
+                til_password.error = "Rellena los campos correctamente"
             }
 
 
